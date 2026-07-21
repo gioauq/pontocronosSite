@@ -1,0 +1,19 @@
+# Cronos — regras básicas
+Options -Indexes
+
+# Protege o diretório de dados
+<FilesMatch "\.(sqlite|sqlite-wal|sqlite-shm)$">
+  Require all denied
+</FilesMatch>
+
+# HTTPS (descomente após ativar o certificado SSL na hospedagem)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Cache de estáticos
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
