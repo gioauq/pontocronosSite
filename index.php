@@ -240,7 +240,7 @@ $jsonLd = [
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© <?= date('Y') ?> Cronos · pontocronos.com.br · Todos os direitos reservados.</p>
+    <p>© <?= date('Y') ?> Cronos · pontocronos.com.br · Todos os direitos reservados. · CNPJ: <?= c('contact_cnpj', '67.223.417/0001-94') ?></p>
     <p>Desenvolvido por <a href="https://qitec.com.br" rel="noopener">QItec</a></p>
   </div>
 </footer>
