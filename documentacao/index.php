@@ -8,6 +8,18 @@
 <meta name="description" content="<?= c('docs_meta_desc', 'Referência da API de integração de folha de pagamento do Cronos: autenticação, escopos e endpoints para o sistema parceiro consumir dados de ponto e apuração.') ?>">
 <link rel="canonical" href="https://pontocronos.com.br/documentacao/">
 <meta name="robots" content="noindex,follow">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/brand/favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/assets/brand/favicon/site.webmanifest">
+<meta name="theme-color" content="#0E2A3B">
+<meta property="og:image" content="https://pontocronos.com.br/assets/brand/social/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://pontocronos.com.br/assets/brand/social/og-image.png">
+<link rel="stylesheet" href="/assets/brand/css/cronos-tokens.css">
+<link rel="preload" href="/assets/brand/fontes/bricolage-grotesque-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/brand/fontes/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -15,7 +27,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="/" aria-label="Cronos — página inicial">
-      <span class="logo-mark" aria-hidden="true">◷</span>Cronos
+      <img src="/assets/brand/logo/logo-horizontal.svg" alt="Cronos" width="128" height="32">
     </a>
     <nav aria-label="Navegação principal">
       <ul class="menu" style="display:flex">
@@ -516,7 +528,7 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <p class="logo footer-logo"><span class="logo-mark" aria-hidden="true">◷</span>Cronos</p>
+      <p class="logo footer-logo"><img src="/assets/brand/logo/logo-negativo.svg" alt="Cronos" width="128" height="32"></p>
       <p class="footer-note"><?= c('footer_note', 'Sistema de ponto eletrônico, escalas e controle de jornada.') ?></p>
     </div>
     <nav aria-label="Links do rodapé">

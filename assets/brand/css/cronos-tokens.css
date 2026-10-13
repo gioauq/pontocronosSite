@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Cronos · Tokens da identidade visual · v1.0 (outubro 2026)
+   Inclua este arquivo ANTES do CSS do site. Use sempre as variáveis,
+   nunca os valores hexadecimais soltos.
+   ========================================================================== */
+
+/* --- Fontes (auto-hospedadas em /assets/brand/fontes/) -------------------
+   Alternativa sem auto-hospedagem: remova os @font-face e use no <head>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+   Os arquivos incluídos cobrem o subconjunto "latin" (acentos do português inclusos). */
+@font-face { font-family: "Bricolage Grotesque"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fontes/bricolage-grotesque-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Bricolage Grotesque"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fontes/bricolage-grotesque-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fontes/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 500; font-style: normal; font-display: swap; src: url("../fontes/ibm-plex-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fontes/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fontes/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-style: normal; font-display: swap; src: url("../fontes/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+
+:root {
+  /* Marca */
+  --cr-petroleo: #1B6E7E;   /* primária: links, ícones, botões secundários, destaques */
+  --cr-tinta:    #0E2A3B;   /* secundária: texto, títulos, rodapé, fundos escuros */
+  --cr-bruma:    #E3EEF0;   /* secundária clara: fundos de seção, selecionado */
+  --cr-ambar:    #F5A524;   /* destaque: SÓ CTA "Solicitar demonstração" e ponteiro do logo. Nunca texto. */
+
+  /* Neutros */
+  --cr-bg:        #FFFFFF;
+  --cr-surface:   #F4F6F7;
+  --cr-border:    #D9E0E3;
+  --cr-text:      #0E2A3B;
+  --cr-text-2:    #4A5B66;
+  --cr-text-soft: #66757F;  /* só sobre --cr-bg (branco); sobre --cr-surface só em ≥ 18px */
+  --cr-link:      #1B6E7E;
+  --cr-on-ambar:  #0E2A3B;  /* texto sobre âmbar (7,28:1) */
+
+  /* Status (produto) */
+  --cr-success: #1A7F4B;  --cr-success-bg: #E4F3EB;  /* apurado */
+  --cr-warning: #9A5B00;  --cr-warning-bg: #FDF1DC;  /* pendente / aguardando aprovação */
+  --cr-error:   #C0392B;  --cr-error-bg:   #FBE7E4;  /* falta / atraso */
+  --cr-info:    #1F5FBF;  --cr-info-bg:    #E5EEFB;  /* informação / feriado */
+
+  /* Tipografia */
+  --cr-font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;  /* títulos */
+  --cr-font-body:    "IBM Plex Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  /* texto e UI */
+  --cr-font-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;  /* horários, saldos, logs */
+
+  --cr-h1: clamp(2.25rem, 1.5rem + 3vw, 3.5rem);      /* 36 → 56px · peso 600 · lh 1.1 · ls -0.02em */
+  --cr-h2: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem);   /* 28 → 36px · peso 600 · lh 1.2 · ls -0.02em */
+  --cr-h3: clamp(1.25rem, 1.1rem + .6vw, 1.5rem);     /* 20 → 24px · peso 600 · lh 1.3 */
+  --cr-body: clamp(1rem, .97rem + .15vw, 1.0625rem);  /* 16 → 17px · peso 400 · lh 1.6 */
+  --cr-small: .875rem;                                /* 14px legenda · lh 1.45 */
+  --cr-data: .9375rem;                                /* 15px mono · peso 500 */
+  --cr-label: .75rem;                                 /* 12px mono caixa alta · ls .08em */
+
+  /* Forma */
+  --cr-radius-sm: 6px;
+  --cr-radius:    10px;
+  --cr-radius-lg: 12px;
+  --cr-radius-pill: 999px;
+  --cr-shadow: 0 1px 2px rgba(14, 42, 59, .06), 0 8px 24px -12px rgba(14, 42, 59, .18);
+}
+
+/* Modo escuro removido de propósito: o site não tem tema escuro hoje, então não
+   criamos um que nunca foi testado (ver CLAUDE-ATUALIZAR-SITE.md, seção 4). */
+
+/* --- Classes utilitárias de marca ---------------------------------------- */
+.cr-time   { font-family: var(--cr-font-mono); font-variant-numeric: tabular-nums; }
+.cr-label  { font: 500 var(--cr-label)/1 var(--cr-font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--cr-text-soft); }
+
+.cr-btn { display: inline-flex; align-items: center; gap: .5rem; font: 600 1rem/1 var(--cr-font-body); letter-spacing: .01em;
+          padding: .8rem 1.25rem; border-radius: var(--cr-radius-sm); text-decoration: none; cursor: pointer; border: 1px solid transparent; }
+.cr-btn--cta { background: var(--cr-ambar); color: var(--cr-on-ambar); }
+.cr-btn--cta:hover { background: #E8961A; }
+.cr-btn--secondary { border-color: var(--cr-link); color: var(--cr-link); background: transparent; }
+.cr-btn:focus-visible { outline: 2px solid var(--cr-ambar); outline-offset: 2px; }
+
+.cr-pill { display: inline-flex; align-items: center; gap: 6px; font: 500 .75rem/1 var(--cr-font-body);
+           padding: 6px 10px; border-radius: var(--cr-radius-pill); }
+.cr-pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.cr-pill--success { background: var(--cr-success-bg); color: var(--cr-success); }
+.cr-pill--warning { background: var(--cr-warning-bg); color: var(--cr-warning); }
+.cr-pill--error   { background: var(--cr-error-bg);   color: var(--cr-error); }
+.cr-pill--info    { background: var(--cr-info-bg);    color: var(--cr-info); }

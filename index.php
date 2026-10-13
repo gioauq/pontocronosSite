@@ -14,6 +14,18 @@
 <meta property="og:url" content="https://pontocronos.com.br/">
 <meta property="og:site_name" content="Cronos">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/brand/favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/assets/brand/favicon/site.webmanifest">
+<meta name="theme-color" content="#0E2A3B">
+<meta property="og:image" content="https://pontocronos.com.br/assets/brand/social/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://pontocronos.com.br/assets/brand/social/og-image.png">
+<link rel="stylesheet" href="/assets/brand/css/cronos-tokens.css">
+<link rel="preload" href="/assets/brand/fontes/bricolage-grotesque-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/brand/fontes/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <?php
 // JSON-LD montado via array + json_encode (não interpolação de string) para escapar
@@ -63,7 +75,7 @@ $jsonLd = [
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="/" aria-label="Cronos — página inicial">
-      <span class="logo-mark" aria-hidden="true">◷</span>Cronos
+      <img src="/assets/brand/logo/logo-horizontal.svg" alt="Cronos" width="128" height="32">
     </a>
     <nav aria-label="Navegação principal">
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
@@ -75,7 +87,7 @@ $jsonLd = [
         <li><a href="#beneficios">Benefícios</a></li>
         <li><a href="#seguranca">Integrações</a></li>
         <li><a href="#faq">Perguntas frequentes</a></li>
-        <li><a class="btn btn-primary btn-nav" href="#demo"><?= c('cta_primary', 'Solicitar demonstração') ?></a></li>
+        <li><a class="cr-btn cr-btn--cta btn-nav" href="#demo"><?= c('cta_primary', 'Solicitar demonstração') ?></a></li>
       </ul>
     </nav>
   </div>
@@ -90,8 +102,8 @@ $jsonLd = [
     <h1 id="hero-title"><?= c('hero_title', 'Cada batida registrada. Cada hora apurada. Sem retrabalho.') ?></h1>
     <p class="hero-sub"><?= c('hero_sub') ?></p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="#demo"><?= c('cta_primary', 'Solicitar demonstração') ?></a>
-      <a class="btn btn-ghost" href="#funcionalidades"><?= c('cta_secondary', 'Ver funcionalidades') ?></a>
+      <a class="cr-btn cr-btn--cta" href="#demo"><?= c('cta_primary', 'Solicitar demonstração') ?></a>
+      <a class="cr-btn cr-btn--secondary" href="#funcionalidades"><?= c('cta_secondary', 'Ver funcionalidades') ?></a>
     </div>
 
     <!-- Elemento-assinatura: régua de jornada -->
@@ -119,7 +131,7 @@ $jsonLd = [
           <div><dt>Jornada prevista</dt><dd class="mono">8:00</dd></div>
           <div><dt>Saldo do dia</dt><dd class="mono positivo">+0:32</dd></div>
           <div><dt>Origem</dt><dd>Facial · Hikvision</dd></div>
-          <div class="j-status"><dt>Status</dt><dd><span class="tag-ok">Apurado automaticamente</span></dd></div>
+          <div class="j-status"><dt>Status</dt><dd><span class="cr-pill cr-pill--success">Apurado automaticamente</span></dd></div>
         </dl>
       </div>
       <figcaption class="sr-only">Exemplo de apuração automática de um dia de trabalho no Cronos.</figcaption>
@@ -213,7 +225,7 @@ $jsonLd = [
   <div class="wrap">
     <h2 id="cta-title"><?= c('cta_final_title', 'Veja o Cronos apurando o ponto da sua equipe') ?></h2>
     <p><?= c('cta_final_body') ?></p>
-    <a class="btn btn-primary btn-lg" href="mailto:<?= c('contact_email', 'contato@pontocronos.com.br') ?>?subject=Solicitação de demonstração — Cronos"><?= c('cta_primary', 'Solicitar demonstração') ?></a>
+    <a class="cr-btn cr-btn--cta btn-lg" href="mailto:<?= c('contact_email', 'contato@pontocronos.com.br') ?>?subject=Solicitação de demonstração — Cronos"><?= c('cta_primary', 'Solicitar demonstração') ?></a>
   </div>
 </section>
 
@@ -222,7 +234,7 @@ $jsonLd = [
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <p class="logo footer-logo"><span class="logo-mark" aria-hidden="true">◷</span>Cronos</p>
+      <p class="logo footer-logo"><img src="/assets/brand/logo/logo-negativo.svg" alt="Cronos" width="128" height="32"></p>
       <p class="footer-note"><?= c('footer_note') ?></p>
     </div>
     <nav aria-label="Links do rodapé">
