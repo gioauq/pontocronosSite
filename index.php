@@ -242,6 +242,7 @@ $jsonLd = [
         <li><a href="#funcionalidades">Funcionalidades</a></li>
         <li><a href="#beneficios">Benefícios</a></li>
         <li><a href="#faq">Perguntas frequentes</a></li>
+        <li><a href="suporte.php">Suporte</a></li>
         <li><a href="privacidade.php">Política de privacidade</a></li>
       </ul>
     </nav>
